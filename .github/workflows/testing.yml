@@ -1,8 +1,8 @@
-name: Linting code
+name: Run Tests
 on: push
 
 jobs:
-  linting:
+  testing:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,5 +21,5 @@ jobs:
       - name: Build app
         run: npm run build --if-present
 
-      - name: Run Eslint
-        run: npm run lint
+      - name: Run tests
+        run: npm test
