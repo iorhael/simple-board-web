@@ -3,9 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "pages/Home"
 import NotFound from "pages/NotFound"
 import HomeService from "services/HomeService"
-
-export const HOME_PATH = "/"
-export const NOT_FOUND_PATH = "*"
+import routes from "./routes"
 
 function App() {
   return (
@@ -13,10 +11,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path={HOME_PATH}
+            path={routes.HOME_PATH}
             element={<Home homeService={new HomeService()} />}
           />
-          <Route path={NOT_FOUND_PATH} element={<NotFound />} />
+          <Route path={routes.NOT_FOUND_PATH} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

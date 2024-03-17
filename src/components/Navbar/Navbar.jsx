@@ -4,7 +4,7 @@ import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
 import Button from "@mui/material/Button"
 import Link from "@mui/material/Link"
-import { HOME_PATH } from "App"
+import routes from "routes"
 
 export default function Navbar() {
   return (
@@ -12,7 +12,7 @@ export default function Navbar() {
       <AppBar position="static">
         <Toolbar>
           <Link
-            href={HOME_PATH}
+            href={routes.HOME_PATH}
             underline="none"
             variant="h6"
             sx={{ color: "white", flexGrow: 1 }}
